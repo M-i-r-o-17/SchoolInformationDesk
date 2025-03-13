@@ -8,7 +8,15 @@
     Title="SchoolInformationDesk">
 
     <ShellContent
-        Title="Home"
+        Title="    Информационная страница"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="    Расписание"
+        ContentTemplate="{DataTemplate local:Shedule}"
+        Route="Shedule" />
+    <ShellContent
+        Title=""
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

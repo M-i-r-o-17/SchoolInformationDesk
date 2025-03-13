@@ -71,7 +71,29 @@
                     }
                     await loadImage.FadeTo(0, 500, Easing.Linear);
                 }
+
+                back.IsEnabled = browser.CanGoBack;
+                forward.IsEnabled = browser.CanGoForward;
             }
+
+        }
+    
+        private void ButtonBack(object sender, System.EventArgs e)
+        {
+            if(browser.CanGoBack) browser.GoBack();
+        }
+
+        private void ButtonReload(object sender, System.EventArgs e)
+        {
+            browser.Reload();
+        }
+        private void ButtonForward(object sender, System.EventArgs e)
+        {
+            if (browser.CanGoForward) browser.GoForward();
+        }
+        private void ButtonHome(object sender, System.EventArgs e)
+        {
+            browser.Source = "https://" + MauiProgram.defaultRedirect + "/";
         }
     }
 

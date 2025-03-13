@@ -17,7 +17,7 @@
         Route="Shedule" />
     <ShellContent
         Title=""
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        ContentTemplate="{DataTemplate local:Settings}"
+        Route="Settings" />
 
 </Shell>

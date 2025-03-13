@@ -15,14 +15,14 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <Button x:Name="back" Text="←" Grid.Column="0" Grid.Row="0" WidthRequest="5" HeightRequest="5"/>
-        <Button x:Name="refresh" Text="֍" Grid.Column="1" Grid.Row="0"  WidthRequest="5" HeightRequest="5"/>
-        <Button x:Name="forward" Text="→" Grid.Column="2" Grid.Row="0"  WidthRequest="5" HeightRequest="5"/>
-        <Button x:Name="home" Text="⌂" Grid.Column="3" Grid.Row="0"  WidthRequest="5" HeightRequest="5"/>
+        <Button x:Name="back" Text="←" Grid.Column="0" Grid.Row="0" WidthRequest="5" HeightRequest="5" Clicked="ButtonBack"/>
+        <Button x:Name="refresh" Text="֍" Grid.Column="1" Grid.Row="0"  WidthRequest="5" HeightRequest="5" Clicked="ButtonReload"/>
+        <Button x:Name="forward" Text="→" Grid.Column="2" Grid.Row="0"  WidthRequest="5" HeightRequest="5" Clicked="ButtonForward"/>
+        <Button x:Name="home" Text="⌂" Grid.Column="3" Grid.Row="0"  WidthRequest="5" HeightRequest="5" Clicked="ButtonHome"/>
         
-        <Label x:Name="url" Text="google.com" Grid.Column="4" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Label x:Name="url" Text="Загрузка..." Grid.Column="4" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-        <WebView x:Name="browser" Source="http://google.com" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="10" Navigating="WebViewNavigating" Navigated="WebViewNavigated"/>
+        <WebView x:Name="browser" Source="https://blgsosh16.obramur.ru/" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="10" Navigating="WebViewNavigating" Navigated="WebViewNavigated"/>
         <Image x:Name="loadImage" Source="xxx.jpg" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="10"/>
     </Grid>
     

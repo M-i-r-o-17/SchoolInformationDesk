@@ -9,6 +9,7 @@
         public MainPage()
         {
             InitializeComponent();
+            MauiProgram.curretUser = -1;
             Task.Run(WebViewLoader);
         }
         /// <summary>
@@ -82,7 +83,6 @@
         {
             if(browser.CanGoBack) browser.GoBack();
         }
-
         private void ButtonReload(object sender, System.EventArgs e)
         {
             browser.Reload();

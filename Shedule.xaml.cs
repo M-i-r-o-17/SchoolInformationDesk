@@ -4,9 +4,7 @@ public partial class Shedule : ContentPage
 {
 	public Shedule()
 	{
-#if WINDOWS
 		InitializeComponent();
-
-#endif
+		MauiProgram.curretUser = -1;
 	}
 }

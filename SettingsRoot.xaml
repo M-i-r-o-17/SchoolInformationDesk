@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchoolInformationDesk.SettingsRoot"
+             Title="            Настройки: приложение">
+    <Grid ColumnSpacing="50">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="300"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0" ColumnSpacing="5" RowSpacing="5" > <!-- Верхняя левая панель -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="5"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="380"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Разрешённые сайты" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" VerticalOptions="Center" HorizontalOptions="Center" FontSize="30"/>
+
+            <Entry x:Name="addSiteSuccesefull" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Keyboard="Url" ClearButtonVisibility="WhileEditing" Focused="EntryClick"/>
+            <Button x:Name="addChangeSite" Text="Принять" Grid.Row="2" Grid.Column="4" Clicked="ButtonAddSite"/>
+
+            <ListView x:Name="allSuccesefull" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="4" RowHeight="50" ItemSelected="ListViewSelected" IsRefreshing="True"/>
+            <Button x:Name="removeSucceseful" Text="Удалить" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Clicked="ButtonDeleteItem"/>
+            <Button x:Name="changeSucceseful" Text="Изменить" Grid.Row="4" Grid.Column="3"  Grid.ColumnSpan="2" Clicked="ButtonChangeSite"/>
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" ColumnSpacing="5" RowSpacing="5" >            <!-- Верхняя Правая панель -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="5"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width ="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+
+            <CheckBox Grid.Column="1" Grid.Row="1" CheckedChanged="ButtonExploerOff"/>
+            <Label Text="Выключить оболочку Windows" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="100" VerticalOptions="Center"/>
+
+            <Label Text="Ссылка до расписания" Grid.Column="1" Grid.Row="2" VerticalOptions="Center"/>
+            <Entry x:Name="sheduleEntry" Text="192.168.10.1" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" Focused="EntryClick"/>
+            <Button Text="Применить" Grid.Column="5" Grid.Row="2" Clicked="ButtonChangeShedule"/>
+
+            <CheckBox Grid.Column="1" Grid.Row="3" CheckedChanged="ButtonPowerOff"/>
+            <Label Text="Автоматически выключить" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="100" VerticalOptions="Center"/>
+
+            <Entry x:Name="powerOffHour" MaxLength="2" Text="16" Grid.Column="1" Grid.Row="4" Focused="EntryClick"/>
+            <Label Text="часов" Grid.Column="2" Grid.Row="4" VerticalOptions="Center"/>
+
+            <Entry x:Name="powerOffMinute" MaxLength="2" Text="00" Grid.Column="3" Grid.Row="4" Focused="EntryClick"/>
+            <Label Text="минут" Grid.Column="4" Grid.Row="4" VerticalOptions="Center"/>
+            <Button x:Name="powerOffSave" Text="Применить" Grid.Column="5" Grid.Row="4"/>
+
+            <CheckBox Grid.Column="1" Grid.Row="6"/>
+            <Label Text="Запускать вместе с Windows" Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="100" VerticalOptions="Center"/>
+
+            <Button Text="Сохранить все настройки!" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="6"/>
+           
+            <Button Text="Перезагрузить службы" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="6"/>
+            <Button Text="Выключить пк" Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="6"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" ColumnSpacing="5" RowSpacing="5" x:Name="keyboardGrid"> <!--  Клавиатура -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="*"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width ="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+    </Grid>
+</ContentPage>

@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SchoolInformationDesk.Settings"
              Title="    Настройки">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid ColumnSpacing="5" RowSpacing="5" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelPassword" Text="Password: " Grid.Column="1" Grid.Row="2"/>
+        <Button Text="7" Grid.Column="2" Grid.Row="1" Clicked="ButtonEvent"/>
+        <Button Text="8" Grid.Column="3" Grid.Row="1" Clicked="ButtonEvent"/>
+        <Button Text="9" Grid.Column="4" Grid.Row="1" Clicked="ButtonEvent"/>
+        <Button Text="4" Grid.Column="2" Grid.Row="2" Clicked="ButtonEvent"/>
+        <Button Text="5" Grid.Column="3" Grid.Row="2" Clicked="ButtonEvent"/>
+        <Button Text="6" Grid.Column="4" Grid.Row="2" Clicked="ButtonEvent"/>
+        <Button Text="1" Grid.Column="2" Grid.Row="3" Clicked="ButtonEvent"/>
+        <Button Text="2" Grid.Column="3" Grid.Row="3" Clicked="ButtonEvent"/>
+        <Button Text="3" Grid.Column="4" Grid.Row="3" Clicked="ButtonEvent"/>
+        <Button Text="Enter" Grid.Column="2" Grid.Row="4" Clicked="ButtonEvent"/>
+        <Button Text="0" Grid.Column="3" Grid.Row="4" Clicked="ButtonEvent"/>
+        <Button Text="Delete" Grid.Column="4" Grid.Row="4" Clicked="ButtonEvent"/>
+    </Grid>
 </ContentPage>
